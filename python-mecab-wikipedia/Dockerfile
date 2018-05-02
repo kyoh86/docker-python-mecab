@@ -3,6 +3,7 @@ FROM kyoh86/python-mecab
 RUN apt-get update && \
     apt-get -y install \
       wget \
+      jq \
       git
 
 WORKDIR /tmp/downloads
@@ -20,4 +21,5 @@ WORKDIR /
 RUN rm -rf /tmp/downloads && \
     apt-get purge -y --auto-remove \
       wget \
+      jq \
       git
